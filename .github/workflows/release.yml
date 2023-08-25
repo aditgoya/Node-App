@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: docker build . -t goyaladit/nest-app2
-    - run: echo "${{ secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password stdin
+    - run: echo "${{ secrets.DOCKER_PASSWORD}}" | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
     - run: docker push goyaladit/nest-app2
    
